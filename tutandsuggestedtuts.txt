@@ -1,0 +1,7 @@
+i had follow this crash Course
+RxJS Crash Course
+https://www.youtube.com/watch?v=tGWBy6Vqq9w
+
+suggested to follow next course
+RxJS Observables Crash Course
+https://www.youtube.com/watch?v=ei7FsoXKPl0

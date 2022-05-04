@@ -5,7 +5,7 @@ const users = {
     data: [
         {
             status: "active",
-            age: 10
+            age: 14
         },
         {
             status: "inactive",
@@ -56,7 +56,7 @@ const users2 = {
 
 const observable = new Observable((subscriber) => {
     subscriber.next(users2);
-    subscriber.complete();
+    subscriber.next(users);
     subscriber.next(users2);
     subscriber.next(users2);
    
