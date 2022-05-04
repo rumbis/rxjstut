@@ -25,10 +25,37 @@ const users = {
         }
         
     ]
-}
+};
+
+const users2 = {
+    data: [
+        {
+            status: "active",
+            age: 14
+        },
+        {
+            status: "inactive",
+            age: 12
+        },
+        {
+            status: "inactive",
+            age: 18
+        },
+        {
+            status: "inactive",
+            age: 72
+        },
+        {
+            status: "active",
+            age: 25
+        }
+        
+    ]
+};
+
 
 const observable = new Observable((subscriber) => {
-    subscriber.next(users);
+    subscriber.next(users2);
    
 }).pipe(
     map((value) => {
