@@ -42,7 +42,7 @@ const observable = new Observable((subscriber) => {
         map((value) => {
 
             console.log("3)Got data from second operator ", value)
-           return value.reduce(() => )
+           return (value.reduce((sum, user) => sum+ user.age, 0) / value.length )
             }),
             
     
