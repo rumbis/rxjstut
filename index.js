@@ -1,6 +1,6 @@
 const { Observable } = require('rxjs');
 const { ColdObservable } = require('rxjs/internal/testing/ColdObservable');
-const { map, pluck } = require('rxjs/operators');
+const { map, pluck, filter } = require('rxjs/operators');
 const users = {
     data: [
         {
@@ -61,7 +61,8 @@ const observable = new Observable((subscriber) => {
     subscriber.next(users2);
    
 }).pipe(
-    pluck("data"),
+    // pluck("data"),
+    filter((value) => value.length  >= 5 ),
     map((value) => {
         // console.log("1) got data from observable ", value)
        return value.data
