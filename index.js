@@ -70,6 +70,7 @@ const observable = new Observable((subscriber) => {
         // console.log("2)Got data from first operator ", value)
        return value.filter(user => user.status === "active")
         }),
+        
         map((value) => {
 
             // console.log("3)Got data from second operator ", value)
