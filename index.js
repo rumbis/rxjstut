@@ -5,7 +5,7 @@ const users = {
     data: [
         {
             status: "active",
-            age: 14
+            age: 10
         },
         {
             status: "inactive",
