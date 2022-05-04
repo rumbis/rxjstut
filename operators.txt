@@ -1,0 +1,2 @@
+Here is the list of operators from the docs
+https://rxjs.dev/guide/operators
