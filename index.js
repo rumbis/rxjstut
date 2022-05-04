@@ -1,4 +1,5 @@
 const { Observable } = require('rxjs');
+const { ColdObservable } = require('rxjs/internal/testing/ColdObservable');
 const { map } = require('rxjs/operators');
 const users = {
     data: [
@@ -43,6 +44,11 @@ const observable = new Observable((subscriber) => {
 
             console.log("3)Got data from second operator ", value)
            return (value.reduce((sum, user) => sum+ user.age, 0) / value.length )
+            }),
+            map ((value) => {
+                console.log("4) Got data from third operator", value);
+                if(value < 18) throw new Error("Age is less than 18");
+                else return value;
             }),
             
     
