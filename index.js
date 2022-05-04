@@ -55,6 +55,9 @@ const users2 = {
 
 
 const observable = new Observable((subscriber) => {
+    subscriber.next(users2);
+    subscriber.next(users2);
+    subscriber.next(users2);
     subscriber.next(users);
    
 }).pipe(
